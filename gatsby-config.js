@@ -27,10 +27,14 @@ module.exports = {
       options: {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
-          process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+          process.env.WPGRAPHQL_URL || `https://learningmakeover.com/graphql`,
+        // `https://wpgatsbydemo.wpengine.com/graphql`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
 
     /**
      * We need this plugin so that it adds the "File.publicURL" to our site
@@ -45,14 +49,6 @@ module.exports = {
         path: `${__dirname}/content/assets`,
       },
     },
-
-    /**
-     * The following two plugins are required if you want to use Gatsby image
-     * See https://www.gatsbyjs.com/docs/gatsby-image/#setting-up-gatsby-image
-     * if you're curious about it.
-     */
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
 
     {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
@@ -70,6 +66,16 @@ module.exports = {
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Poppins`,
+          `source sans pro:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
 
     /**
      * this (optional) plugin enables Progressive Web App + Offline functionality
