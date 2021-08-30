@@ -11,6 +11,7 @@ const Menu = () => {
               nodes {
                 id
                 label
+                url
               }
             }
           }
@@ -38,7 +39,10 @@ const Menu = () => {
             {data.allWpMenu.edges[0].node.menuItems.nodes.map(node => {
               return (
                 <li key={node.id} className="nav__menu-item">
-                  <Link className="nav__menu-link" to={`/${node.label}`}>
+                  <Link
+                    className="nav__menu-link"
+                    to={`http://localhost:8000${node.url}`}
+                  >
                     {node.label}
                   </Link>
                 </li>
