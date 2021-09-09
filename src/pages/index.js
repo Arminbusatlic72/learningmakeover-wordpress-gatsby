@@ -6,7 +6,7 @@ import FrontPageAboutSection from "../components/frontPageAboutSection/FrontPage
 import FrontPageAboutFounderSection from "../components/frontPageAboutFounderSection/FrontPageAboutFounderSection"
 import FrontPageWhyWorkWithMeSection from "../components/frontPageWhyWorkWithMeSection/FrontPageWhyWorkWithMeSection"
 import FrontPageWhatDoIDoSection from "../components/frontPageWhatDoIDoSection/FrontPageWhatDoIDoSection"
-import TestimonialsSlider from "../components/testimonialsSlider/TestimonialsSlider"
+import TestimonialSlider from "../components/testimonialSlider/TestimonialSlider"
 const IndexPage = ({ data }) => {
   return (
     <>
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
         <FrontPageWhatDoIDoSection
           whatDoIDoData={data.allWpPage.edges[0].node}
         />
-        <TestimonialsSlider />
+        <TestimonialSlider />
       </Layout>
     </>
   )

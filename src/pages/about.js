@@ -2,13 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import AboutPageSection from "../components/aboutPageSection/AboutPageSection"
+import PageContactFormSection from "../components/pageContactFormSection/PageContactFormSection"
 
-const About = ({ data }) => {
-  console.log(data)
+const aboutPage = ({ data }) => {
   return (
     <>
       <Layout>
         <AboutPageSection aboutData={data.allWpPage.edges[0].node} />
+        <PageContactFormSection />
       </Layout>
     </>
   )
@@ -39,4 +40,4 @@ export const query = graphql`
     }
   }
 `
-export default About
+export default aboutPage

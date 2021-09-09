@@ -1,0 +1,18 @@
+.global-header__container {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.global-header {   
+    position: relative;
+    z-index: 10;
+    background-color: $white;
+}
+.global-header__wrapper-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

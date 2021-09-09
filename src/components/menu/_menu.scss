@@ -1,0 +1,56 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.main__nav {
+    display: flex;
+}
+.nav__menu {
+    position: absolute;
+    left: 0;
+    top: -335px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    background-color: $white;
+    transition: visibility 0.5s, opacity 0.5s;
+    z-index: -1;
+    @include easeOut;
+}
+.menu-show {
+    
+    top: 70px;
+}
+.nav__content-wrapper {
+    display: flex;
+   
+}
+.nav__menu-item {
+    background-color: $white;
+    cursor: pointer;
+    padding: 0 5%;
+}
+.nav__menu-item:hover {
+    background-color: $green;
+    .nav__menu-link {
+        color: $white;
+
+    }    
+
+}
+.nav__menu-link {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $blue;  
+    
+}
+.nav__menu-item:nth-child(2) .nav__menu-link {
+    color: $green;
+}
+.nav__menu-item:nth-child(2):hover {
+    background-color: $blue;
+    .nav__menu-link {
+        color: $green;
+    }
+
+} 

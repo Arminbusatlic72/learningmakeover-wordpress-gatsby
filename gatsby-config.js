@@ -28,7 +28,6 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL || `https://learningmakeover.com/graphql`,
-        // `https://wpgatsbydemo.wpengine.com/graphql`,
       },
     },
     `gatsby-plugin-image`,

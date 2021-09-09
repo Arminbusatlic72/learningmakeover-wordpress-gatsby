@@ -4,7 +4,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-const TestimonialsSlider = () => {
+const TestimonialSlider = () => {
   const data = useStaticQuery(graphql`
     {
       allWpTestimonialsSlide {
@@ -12,15 +12,14 @@ const TestimonialsSlider = () => {
           node {
             testimonialsSliderContent {
               name
-              text
               position
+              testimonial
             }
           }
         }
       }
     }
   `)
-  console.log(data)
   return (
     <section>
       <h2>Testimonials</h2>
@@ -33,8 +32,8 @@ const TestimonialsSlider = () => {
         autoplaySpeed={5000}
       >
         {data.allWpTestimonialsSlide.edges.map(edge => (
-          <div>
-            <p>{edge.node.testimonialsSliderContent.text}</p>
+          <div key={edge.node.id}>
+            <p>{edge.node.testimonialsSliderContent.testimonial}</p>
             <p>{edge.node.testimonialsSliderContent.name}</p>
 
             <p>{edge.node.testimonialsSliderContent.position}</p>
@@ -45,4 +44,4 @@ const TestimonialsSlider = () => {
   )
 }
 
-export default TestimonialsSlider
+export default TestimonialSlider
