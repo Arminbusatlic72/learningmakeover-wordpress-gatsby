@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="global-wrapper">
-        <main>{children}</main>
-      </div>
+      {/* <div className="global-wrapper"> */}
+      <main>{children}</main>
+      {/* </div> */}
       <Footer />
     </>
   )

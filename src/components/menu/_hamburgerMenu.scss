@@ -3,15 +3,19 @@
     z-index: 13;
     cursor: pointer;
     margin: 1rem;
+    padding: 1rem;
     @include easeOut;
+    @media (min-width: 880px) {
+      display:none;
+    }
   }
   .nav__btn:focus {
     outline: none;
   }
   .nav__line {
-    width: 2rem;
-    height: 0.2rem;
-    margin-bottom: 5px;
+    width: 2.4rem;
+    height: 0.3rem;
+    margin-bottom: 0.8rem;
     background-color: $black;
   }
   .btn__rotate:focus {
@@ -21,19 +25,20 @@
     z-index: 13;
     cursor: pointer;
     margin: 1rem;
+    
     transform: rotate(180deg);
     @include easeOut;
     .nav__line {
-      width: 2rem;
-      height: 0.2rem;
-      margin-bottom: 5px;
+      width: 2.4rem;
+      height: 0.3rem;
+      margin-bottom: 0.8rem;
       background: $black;
       @include easeOut;
       &:nth-child(1) {
-        transform: rotate(45deg) translate(2px, 5px);
+        transform: rotate(45deg) translate(14px, 12px);
       } 
       &:nth-child(2) {
-        transform: rotate(-45deg) translate(1px, -3px);
+        transform: rotate(-45deg) translate(-4px, 6px);
       }
     }
   }

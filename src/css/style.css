@@ -3,13 +3,13 @@
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
-  --maxWidth-sm: 24rem;
-  --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
-  --maxWidth-xl: 36rem;
-  --maxWidth-2xl: 42rem;
+  --maxWidth-sm: 54rem;
+  --maxWidth-md: 72rem;
+  --maxWidth-lg: 96rem;
+  --maxWidth-xl: 114rem;
+  --maxWidth-2xl: 132rem;
   --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 70rem;
+  --maxWidth-4xl: 96rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-px: "1px";
@@ -47,7 +47,7 @@
   --lineHeight-relaxed: 1.625;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
-  --fontSize-1: 1rem;
+  --fontSize-1: 1.6rem;
   --fontSize-2: 1.2rem;
   --fontSize-3: 1.44rem;
   --fontSize-4: 1.728rem;
@@ -72,9 +72,10 @@
 
 html {
   line-height: var(--lineHeight-normal);
-  font-size: var(--fontSize-root);
+  /* font-size: var(--fontSize-root); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%; 
 }
 
 body {
@@ -332,4 +333,36 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+.card .ast-oembed-container {
+  position: relative;
+}
+.card .ast-oembed-container:nth-child(even):before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  display: inline-block;
+  background-image: url("../images/videoArrowL.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10rem;
+  width: 10rem;
+  z-index: 2;
+  background-color:transparent;
+}
+.card .ast-oembed-container:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  display: inline-block;
+  background-image: url("../images/videoArrowR.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10rem;
+  width: 10rem;
+  z-index: 2;
+  background-color:transparent;
 }

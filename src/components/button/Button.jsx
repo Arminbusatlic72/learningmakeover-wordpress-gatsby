@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Button = props => {
   return (
-    <Link className="button" to={props.link}>
+    <Link className={`button ${props.className}`} to={props.link}>
       {props.children}
     </Link>
   )

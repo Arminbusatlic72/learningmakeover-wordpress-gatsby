@@ -10,6 +10,7 @@ const TestimonialSlider = () => {
       allWpTestimonialsSlide {
         edges {
           node {
+            id
             testimonialsSliderContent {
               name
               position
@@ -21,25 +22,36 @@ const TestimonialSlider = () => {
     }
   `)
   return (
-    <section>
-      <h2>Testimonials</h2>
-      <Slider
-        dots={true}
-        arrows={false}
-        slidesToShow={1}
-        slidesToScroll={1}
-        autoplay={true}
-        autoplaySpeed={5000}
-      >
-        {data.allWpTestimonialsSlide.edges.map(edge => (
-          <div key={edge.node.id}>
-            <p>{edge.node.testimonialsSliderContent.testimonial}</p>
-            <p>{edge.node.testimonialsSliderContent.name}</p>
+    <section className="testimonials-slider-section">
+      <div className="global-wrapper">
+        <h2 className="testimonials-slider-section__heading">Testimonials</h2>
+        <Slider
+          dots={true}
+          arrows={false}
+          slidesToShow={1}
+          slidesToScroll={1}
+          autoplay={true}
+          autoplaySpeed={5000}
+        >
+          {data.allWpTestimonialsSlide.edges.map(edge => (
+            <div
+              className="testimonials-slider-section__slide"
+              key={edge.node.id}
+            >
+              <p className="testimonials-slider-section__slide-text">
+                {edge.node.testimonialsSliderContent.testimonial}
+              </p>
+              <p className="testimonials-slider-section__slide-name">
+                {edge.node.testimonialsSliderContent.name}
+              </p>
 
-            <p>{edge.node.testimonialsSliderContent.position}</p>
-          </div>
-        ))}
-      </Slider>
+              <p className="testimonials-slider-section__slide-position">
+                {edge.node.testimonialsSliderContent.position}
+              </p>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </section>
   )
 }

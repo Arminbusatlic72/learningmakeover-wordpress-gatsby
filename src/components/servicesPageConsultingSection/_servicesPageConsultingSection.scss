@@ -1,0 +1,15 @@
+@import "../../scss/variables.scss";
+@import "../../scss//mixins.scss";
+.consulting-section {
+    counter-reset: section;
+    &__heading {
+        color:$blue;
+        font-weight: bold;
+        font-size: 3.8rem;
+    }
+    &__subheading {
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+
+}

@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import Button from "../button/Button"
 
-const Menu = props => {
+const Menu = () => {
   const data = useStaticQuery(graphql`
     {
       allWpMenu(filter: { name: { eq: "Primary Menu" } }) {
@@ -22,17 +23,6 @@ const Menu = props => {
   const [open, setOpen] = useState(false)
   return (
     <nav className="main__nav">
-      <div
-        className={open === true ? "btn__rotate" : "nav__btn"}
-        onClick={() => setOpen(!open)}
-        onKeyDown={() => setOpen(!open)}
-        role="button"
-        tabIndex="0"
-      >
-        <div className="nav__line"> </div>
-
-        <div className="nav__line"> </div>
-      </div>
       <ul className={open === true ? "nav__menu menu-show" : "nav__menu"}>
         {data.allWpMenu.edges[0].node.menuItems.nodes.map(node => {
           return (
@@ -49,6 +39,22 @@ const Menu = props => {
           )
         })}
       </ul>
+      <div className="main-nav__button-wrapper">
+        <Button className={``} link={"/"}>
+          Start learning
+        </Button>
+      </div>
+      <div
+        className={open === true ? "btn__rotate" : "nav__btn"}
+        onClick={() => setOpen(!open)}
+        onKeyDown={() => setOpen(!open)}
+        role="button"
+        tabIndex="0"
+      >
+        <div className="nav__line"> </div>
+
+        <div className="nav__line"> </div>
+      </div>
     </nav>
   )
 }

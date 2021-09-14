@@ -1,0 +1,29 @@
+@import "../../scss/variables.scss";
+.testimonials-slider-section {
+    text-align: center;
+    color: $blue;
+    padding-bottom: 20rem;
+    &__heading {
+        font-size: 3.2rem;
+        font-weight: bold;
+    }
+    &__slide {
+        padding-top: 4rem;
+        min-height: 50vh;
+    }
+    &__slide-text {
+        font-size: 1.4rem;
+        font-weight: normal;
+        line-height: 1.8;
+        margin-bottom: 4rem;
+    }
+    &__slide-name {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+    &__slide-position {
+        font-weight: normal;
+    }
+
+}

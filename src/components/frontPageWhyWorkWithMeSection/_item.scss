@@ -1,0 +1,17 @@
+@import "../../scss/variables.scss";
+.whyToWorkWithMe-section__item {
+    font-size: 1.4rem;
+    font-weight: 1.4;
+    color: $blue;
+    border-radius: 20px;
+    background:linear-gradient(#6BF0D4, $white); 
+    padding: 3rem 2rem;
+
+}
+.whyToWorkWithMe-section__item::before {
+    counter-increment: section;                   
+    content: counter(section); 
+    font-size: 5.9rem;
+    font-weight: bold;   
+                                                     
+  }

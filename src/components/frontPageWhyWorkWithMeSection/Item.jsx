@@ -2,7 +2,7 @@ import React from "react"
 
 const Item = ({ children }) => {
   return (
-    <div>
+    <div className="whyToWorkWithMe-section__item">
       <p>{children}</p>
     </div>
   )

@@ -1,0 +1,18 @@
+@import "../../scss//variables.scss";
+.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__nav-list {
+       list-style: none;
+       display: flex;
+    }
+    &__nav-list-item {
+        padding: 1rem;
+    }
+    &__nav-link {
+        text-decoration: none;
+        color:$white;
+    }
+}

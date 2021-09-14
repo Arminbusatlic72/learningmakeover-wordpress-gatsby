@@ -43,6 +43,8 @@ export const query = graphql`
               altText
             }
             heading
+            headingSecondLine
+            headingThirdLine
             subheading
             text
             button {
@@ -51,6 +53,14 @@ export const query = graphql`
             }
           }
           frontPageAboutSection {
+            aboutimage {
+              altText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
             title
             button {
               title
