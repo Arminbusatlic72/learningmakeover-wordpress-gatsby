@@ -36,7 +36,7 @@ const FrontPageAboutSection = props => {
                 role="button"
                 tabIndex="0"
                 onClick={() => toggleTab(1)}
-                onKeyDown={() => toggleTab(3)}
+                onKeyDown={() => toggleTab(1)}
                 className={
                   toggleState === 1
                     ? "about-section__tabs-nav-item active"
@@ -49,7 +49,7 @@ const FrontPageAboutSection = props => {
                 role="button"
                 tabIndex="0"
                 onClick={() => toggleTab(2)}
-                onKeyDown={() => toggleTab(3)}
+                onKeyDown={() => toggleTab(2)}
                 className={
                   toggleState === 2
                     ? "about-section__tabs-nav-item active"

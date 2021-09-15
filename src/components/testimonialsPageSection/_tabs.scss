@@ -1,0 +1,78 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+.tabs {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.tab-nav-list {
+    flex: 1;
+
+
+}
+.tab-nav-list-item {
+    border: 1px solid black;
+    border-radius: $border-radius;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    height: 10rem;
+
+}
+.tab-heading-wrapper {
+    padding: 0 2rem;
+    width: 80%;
+}
+.tab-heading {
+font-size: 1.8rem;
+font-weight: bold;
+color:$blue;
+margin: 0;
+}
+.tab-position {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: gray;
+    margin: 0;
+
+}
+.tab-content {
+    display: none;
+    flex: 1;
+    @include mediaLg {
+        margin-left: 5rem ;
+
+    }
+    &__heading {
+        margin: 0;
+        color:$blue;
+        margin-bottom: 1.4rem;
+    }
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: $blue;
+        font-weight: bold;
+    }
+    
+
+}
+.tab-img-rounded {
+    display: inline-block;
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    
+}
+.active {
+    font-weight: bold;
+}
+.active-content {
+    display: block;
+}

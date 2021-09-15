@@ -30,6 +30,15 @@ module.exports = {
           process.env.WPGRAPHQL_URL || `https://learningmakeover.com/graphql`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

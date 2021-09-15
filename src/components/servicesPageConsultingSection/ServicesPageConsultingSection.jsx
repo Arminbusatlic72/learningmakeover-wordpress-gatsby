@@ -3,7 +3,7 @@ import Card from "../card/Card"
 
 const ServicesPageConsultingSection = props => {
   let data = props.consultingData
-  console.log(data)
+
   return (
     <section className="consulting-section">
       <div className="global-wrapper">
