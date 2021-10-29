@@ -10,14 +10,15 @@ const ServicesPageConsultingSection = props => {
         <div className="row">
           <div className="column-40">
             <h2 className="consulting-section__heading">
-              {data.servicesPage.title}
+              {data.servicesPage.pagetitle}
             </h2>
             <h6 className="consulting-section__subheading">
-              {data.servicesPage.subtitle}
+              {data.servicesPage.pagesubtitle}
             </h6>
             <p>{data.servicesPage.text}</p>
           </div>
           <div className="column-60">
+            <div className="consulting-section__blur-background"></div>
             <Card
               question={data.servicesPage.question.question}
               answer={data.servicesPage.question.answer}

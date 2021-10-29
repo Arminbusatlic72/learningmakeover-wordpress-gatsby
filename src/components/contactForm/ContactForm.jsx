@@ -39,6 +39,7 @@ const ContactForm = props => {
           name="message"
           id="message"
           rows="1"
+          placeholder="Type your message"
           className="contact-form__input"
         />
       </label>

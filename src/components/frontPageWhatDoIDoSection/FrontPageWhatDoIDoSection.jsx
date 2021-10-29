@@ -7,6 +7,8 @@ const FrontPageWhatDoIDoSection = props => {
       <div className="global-wrapper">
         <div className="row">
           <div className="column-40">
+            <div className="whatDoIDo-section__blur-background"></div>
+
             <div className="whatDoIDo-section__heading-wrapper">
               <h2 className="whatDoIDo-section__heading">
                 {data.frontPageWhatDoIDoSection.whatDoIDoTitle}

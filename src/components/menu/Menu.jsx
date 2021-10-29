@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Button from "../button/Button"
+import ButtonExternal from "../button/ButtonExternal"
 
 const Menu = () => {
   const data = useStaticQuery(graphql`
@@ -40,12 +40,12 @@ const Menu = () => {
         })}
       </ul>
       <div className="main-nav__button-wrapper">
-        <Button className={``} link={"/"}>
+        <ButtonExternal className={``} link={"/"}>
           Start learning
-        </Button>
+        </ButtonExternal>
       </div>
       <div
-        className={open === true ? "btn__rotate" : "nav__btn"}
+        className={open === true ? "nav__btn btn__rotate" : "nav__btn"}
         onClick={() => setOpen(!open)}
         onKeyDown={() => setOpen(!open)}
         role="button"

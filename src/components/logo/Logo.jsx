@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+
+import LogoHeader from "../../assets/logoHeader.svg"
 
 const Logo = () => {
   return (
     <Link to={`/`}>
-      <StaticImage src="../../images/logo.png" alt="learning makeover logo" />
+      <LogoHeader />
     </Link>
   )
 }

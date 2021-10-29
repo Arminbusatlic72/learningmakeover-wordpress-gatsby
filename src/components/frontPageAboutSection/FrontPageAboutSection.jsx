@@ -104,6 +104,7 @@ const FrontPageAboutSection = props => {
             <Button link={`/${data.frontPageAboutSection.button.title}`}>
               {data.frontPageAboutSection.button.title}
             </Button>
+            <div className="about-section__blur-background"></div>
           </div>
         </div>
       </div>

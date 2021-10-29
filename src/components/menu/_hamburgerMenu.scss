@@ -3,7 +3,10 @@
     z-index: 13;
     cursor: pointer;
     margin: 1rem;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
     @include easeOut;
     @media (min-width: 880px) {
       display:none;
@@ -17,15 +20,13 @@
     height: 0.3rem;
     margin-bottom: 0.8rem;
     background-color: $black;
+    border-radius: 20px;
+    
   }
   .btn__rotate:focus {
     outline: none;
   }
   .btn__rotate {
-    z-index: 13;
-    cursor: pointer;
-    margin: 1rem;
-    
     transform: rotate(180deg);
     @include easeOut;
     .nav__line {
@@ -35,10 +36,10 @@
       background: $black;
       @include easeOut;
       &:nth-child(1) {
-        transform: rotate(45deg) translate(14px, 12px);
+        transform: rotate(45deg) translate(8px, 7px);
       } 
       &:nth-child(2) {
-        transform: rotate(-45deg) translate(-4px, 6px);
+        transform: rotate(-45deg) translate(0px, 0px);
       }
     }
   }

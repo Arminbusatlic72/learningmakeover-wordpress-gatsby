@@ -79,7 +79,7 @@ module.exports = {
       options: {
         fonts: [
           `Poppins`,
-          `source sans pro:300,400,400i,700`, // you can also specify font weights and styles
+          `source sans pro:300,400,500,800,900`, // you can also specify font weights and styles
         ],
         display: "swap",
       },

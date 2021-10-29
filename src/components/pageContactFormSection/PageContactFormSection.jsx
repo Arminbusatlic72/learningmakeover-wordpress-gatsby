@@ -1,10 +1,12 @@
 import React from "react"
+import Icon from "../../assets/contactIcon.svg"
 import ContactForm from "../contactForm/ContactForm"
 
 const PageContactFormSection = () => {
   return (
     <section className="contact-form-section">
       <div className="global-wrapper">
+        <Icon />
         <h6 className="contact-form-section__subheading">Get in touch</h6>
         <h2 className="contact-form-section__heading">
           Schedule an Appointment
