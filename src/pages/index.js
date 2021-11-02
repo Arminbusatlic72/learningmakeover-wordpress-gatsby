@@ -77,7 +77,9 @@ export const query = graphql`
           }
           frontPageAboutFounderSection {
             foundertext
-            foundertitle
+            foundertitlefirstline
+            foundertitlesecondline
+            foundernameposition
             founderimage {
               altText
               localFile {

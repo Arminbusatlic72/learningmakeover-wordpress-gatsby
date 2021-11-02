@@ -4,17 +4,17 @@
     display: flex;
 }
 .nav__menu {
+    background-color: $background-color;
     display: flex;
     padding: 0;
     position: absolute;
-    top: 14.7rem;
+    top: 13rem;
     left: -60rem;
     flex-direction: column;
     list-style: none;
     width: 100%;
     height: 100vh;
     z-index: 1;
-    background-color: $white;
     overflow-y: hidden;
     transition: visibility 0.5s, opacity 0.5s;
     @include easeOut;
@@ -47,7 +47,6 @@
     
 }
 .nav__menu-item {
-    background-color: $white;
     cursor: pointer;
     padding: 2.5rem 2rem 2.5rem 2rem;
 

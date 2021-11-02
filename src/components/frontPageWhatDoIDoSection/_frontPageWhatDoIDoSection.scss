@@ -1,10 +1,15 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
 .whatDoIDo-section {
-    padding-top: 15rem;
+   padding-top: 0;
+    @include mediaLg {
+        padding-top: 15rem;
+    }
     padding-bottom: 14rem;
     background-color: $green;
     position: relative;
     &__heading {
+        position: relative;
         font-size: 3.2rem;
         line-height: 1.4;
         font-weight: bold;
@@ -23,11 +28,12 @@
     }
     &__heading-wrapper {
         display: flex;
-        justify-content: center;
         align-items: center;
-        height: 100%;
-        border-right: 1px solid $blue;
-        
+        @include mediaLg {
+            justify-content: center;
+            border-right: 1px solid $blue;
+        }
+        height: 100%;    
         
     }
     &__subheading {
@@ -38,6 +44,10 @@
     &__small {
         font-size: 1.6rem;
         color:  $blue;
+    }
+    &__list {
+        margin-left: 2rem;
+        list-style-position: outside;
     }
     &__list-item {
         font-size: 1.4rem;

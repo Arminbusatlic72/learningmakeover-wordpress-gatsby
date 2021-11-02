@@ -12,9 +12,14 @@
     text-align: center;
     white-space: nowrap;
     text-decoration: none;
-
- 
-  
-  
+    &__content-wrapper {
+      display: flex;
+      align-items: center;
+    justify-content: center;
+    }
+    &__arrow {
+      margin-left: 1rem;
+    }
   }
+  
   

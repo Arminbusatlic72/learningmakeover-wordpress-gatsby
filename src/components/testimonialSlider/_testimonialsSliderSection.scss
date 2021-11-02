@@ -1,21 +1,35 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
 .testimonials-slider-section {
     text-align: center;
     color: $blue;
-    padding-bottom: 20rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @include mediaLg {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    }
     &__heading {
         font-size: 3.2rem;
         font-weight: bold;
+        margin-bottom: 3rem;
     }
     &__slide {
-        padding-top: 4rem;
-        min-height: 50vh;
+        text-align: center;
+        min-height: 30vh;
+        padding-top: 5rem;
+        @include mediaMd {
+        padding-top: 10rem;
+        }
+        
+    }
+    &__slide-text-wrapper {
+        position: relative;
     }
     &__slide-text {
         font-size: 1.4rem;
         font-weight: normal;
         line-height: 1.8;
-        margin-bottom: 4rem;
     }
     &__slide-name {
         font-weight: bold;
@@ -27,3 +41,33 @@
     }
 
 }
+.slider-wrapper {
+    max-width: 25rem;
+    width: 100%;
+    margin: 0 auto;
+    @include mediaMd {
+        max-width: 50rem;
+    }
+    @include mediaLg {
+        max-width: 70rem;
+    }
+    @include mediaXl {
+        max-width: 95rem;
+    }
+}
+.slick-prev {
+    left: -52px !important;
+  }
+.slick-next {
+    right: -52px!important;
+}
+  
+  .slick-next:before,
+  .slick-prev:before {
+    content: "" !important;
+  }
+  .next-slick-arrow,
+  .prev-slick-arrow {
+    color: #000000;
+    font-size: 48px;
+  }

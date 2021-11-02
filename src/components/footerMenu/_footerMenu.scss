@@ -1,8 +1,13 @@
 @import "../../scss//variables.scss";
+@import "../../scss/mixins.scss";
 .footer-menu {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2rem;
+    @include mediaMd {
+        font-size: 1.4rem;
+    }
 
     &__nav-list {
        list-style: none;

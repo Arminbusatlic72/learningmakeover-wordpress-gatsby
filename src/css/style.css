@@ -382,9 +382,8 @@ a:focus {
   background-image: url("../images/Vector.png");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100%;
-  width: 20rem;
-  
+  height: 25rem;
+  width: 20rem; 
   
 }
 @media (min-width: 500px) {
@@ -393,3 +392,69 @@ a:focus {
   }
   
 }
+
+  .relative::before {
+    content: "";
+    position: absolute;
+    top: 95%;
+    
+    left: 5%;
+    background-image: url("../images/videoArrowR.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 7rem;
+    width: 7rem; 
+    -webkit-transform:rotate(286deg);
+  -moz-transform: rotate(286deg);
+  -ms-transform: rotate(286deg);
+  -o-transform: rotate(286deg);
+  transform: rotate(286deg);
+  
+  }
+  @media (min-width: 769px) {
+    .relative::before {
+      left: -30%;
+    }
+  }
+
+@media (min-width: 769px) {
+.whatDoIDo-section::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0;
+  background-image: url("../images/VectorL.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25rem;
+  width: 20rem; 
+}
+}
+.whatDoIDo-section__heading::before {
+  content: "";
+  position: absolute;
+  top: 95%;
+    right: 17%;
+  background-image: url("../images/hoverLineWhite.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1rem;
+  width: 9rem;
+
+}
+@media (min-width: 769px) {
+  .testimonials-slider-section__slide-text-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 17%;
+    background-image: url("../images/quote.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10rem;
+    width: 10rem;
+    z-index: -1;
+  
+  }
+}
+

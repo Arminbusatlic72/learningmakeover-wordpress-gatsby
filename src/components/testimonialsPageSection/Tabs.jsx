@@ -19,7 +19,7 @@ const Tabs = props => {
             onKeyDown={() => toggleTab(edge.node.id)}
             className={
               toggleState === edge.node.id
-                ? "tab-nav-list-item active"
+                ? "tab-nav-list-item active-1"
                 : "tab-nav-list-item"
             }
           >

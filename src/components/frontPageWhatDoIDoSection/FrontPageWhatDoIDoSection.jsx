@@ -23,7 +23,7 @@ const FrontPageWhatDoIDoSection = props => {
             <p className="whatDoIDo-section__small">
               {data.frontPageWhatDoIDoSection.whatDoIDoSmall}
             </p>
-            <ul>
+            <ul className="whatDoIDo-section__list">
               <li className="whatDoIDo-section__list-item">
                 {data.frontPageWhatDoIDoSection.whatDoIDoText1}
               </li>
@@ -35,6 +35,7 @@ const FrontPageWhatDoIDoSection = props => {
               {data.frontPageWhatDoIDoSection.whatDoIDoSubtitle1}
             </h3>
             <Button
+              className={"relative"}
               link={`/${data.frontPageWhatDoIDoSection.whatDoIDoButton.title}`}
             >
               {data.frontPageWhatDoIDoSection.whatDoIDoButton.title}

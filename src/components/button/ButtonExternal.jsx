@@ -1,4 +1,5 @@
 import React from "react"
+import Arrow from "../../assets/btnArrow.svg"
 
 const ButtonExternal = props => {
   return (
@@ -8,7 +9,10 @@ const ButtonExternal = props => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {props.children}
+      <div className="button__content-wrapper">
+        {props.children}
+        <Arrow className="button__arrow" />
+      </div>
     </a>
   )
 }

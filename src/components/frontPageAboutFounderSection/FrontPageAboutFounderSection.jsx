@@ -3,6 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 const FrontPageAboutFounderSection = props => {
   let data = props.aboutFounderData
+
   return (
     <section className="about-founder-section">
       <div className="global-wrapper">
@@ -25,7 +26,13 @@ const FrontPageAboutFounderSection = props => {
           </div>
           <div className="column-60">
             <div className="about-founder-section__text-wrapper">
-              <h2>{data.frontPageAboutFounderSection.foundertitle}</h2>
+              <h2 className="about-founder-section__heading">
+                {data.frontPageAboutFounderSection.foundertitlefirstline}
+                <span className="about-founder-section__heading-green">
+                  {` ${data.frontPageAboutFounderSection.foundernameposition}`}
+                </span>
+                {` ${data.frontPageAboutFounderSection.foundertitlesecondline}`}
+              </h2>
               <p>{data.frontPageAboutFounderSection.foundertext}</p>
             </div>
           </div>
